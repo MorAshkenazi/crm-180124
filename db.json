@@ -1,0 +1,18 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "firstName": "Mor",
+      "lastName": "Ashkenazi",
+      "email": "morashkor@gmail.com",
+      "phone": "0526853652"
+    },
+    {
+      "id": 2,
+      "firstName": "Israel",
+      "lastName": "Israeli",
+      "email": "israel@gmail.com",
+      "phone": "0526889563"
+    }
+  ]
+}
