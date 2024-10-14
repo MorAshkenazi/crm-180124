@@ -1,18 +1,18 @@
 {
   "customers": [
     {
-      "id": 1,
-      "firstName": "Mor",
-      "lastName": "Ashkenazi",
-      "email": "morashkor@gmail.com",
-      "phone": "0526853652"
+      "id": "f69a",
+      "firstName": "Margol",
+      "lastName": "Bitter",
+      "email": "margol@avi.com",
+      "phone": "0526325693"
     },
     {
-      "id": 2,
-      "firstName": "Israel",
-      "lastName": "Israeli",
-      "email": "israel@gmail.com",
-      "phone": "0526889563"
+      "id": "e519",
+      "firstName": "Margol",
+      "lastName": "Bitter",
+      "email": "margol@avi.com",
+      "phone": "0526325693"
     }
   ]
 }
