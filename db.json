@@ -1,18 +1,18 @@
 {
   "customers": [
     {
-      "id": "f69a",
       "firstName": "Margol",
       "lastName": "Bitter",
       "email": "margol@avi.com",
-      "phone": "0526325693"
+      "phone": "0526325693",
+      "id": "f69a"
     },
     {
-      "id": "9cbb",
-      "firstName": "Yossi",
+      "firstName": "Yoav",
       "lastName": "Ashkenazi",
       "email": "yossi@gmail.com",
-      "phone": "052-8956965"
+      "phone": "052-8956965",
+      "id": "9cbb"
     }
   ]
 }

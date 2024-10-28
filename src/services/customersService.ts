@@ -1,7 +1,7 @@
 import axios from "axios";
 import { Customer } from "../interfaces/Customer";
 
-const api: string = "http://localhost:8000/customers";
+const api: string = `${process.env.REACT_APP_API}/customers`;
 
 // CRUD
 
