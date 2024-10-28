@@ -5,12 +5,15 @@ import {
   deleteCustomer,
   getAllCustomers,
 } from "../services/customersService";
+import { NavigateFunction, useNavigate } from "react-router-dom";
 
 interface CustomersProps {}
 
 const Customers: FunctionComponent<CustomersProps> = () => {
   let [customers, setCustomers] = useState<Customer[]>([]);
   let [customersChanged, setCustomersChanged] = useState<boolean>(false);
+
+  const navigate: NavigateFunction = useNavigate();
 
   useEffect(() => {
     getAllCustomers()
@@ -24,7 +27,12 @@ const Customers: FunctionComponent<CustomersProps> = () => {
         <i className="fa-solid fa-address-card"></i>CRM
       </h1>
       <div className="container">
-        <button className="btn btn-success">Add Customer</button>
+        <button
+          className="btn btn-success"
+          onClick={() => navigate("/add-customer")}
+        >
+          Add Customer
+        </button>
         {customers.length ? (
           <table className="table table-striped">
             <thead>
@@ -47,7 +55,12 @@ const Customers: FunctionComponent<CustomersProps> = () => {
                   <td>{customer.phone}</td>
                   <td>{customer.email}</td>
                   <td>
-                    <i className="fa-solid fa-user-pen text-warning"></i>
+                    <i
+                      className="fa-solid fa-user-pen text-warning"
+                      onClick={() =>
+                        navigate(`/update-customer/${customer.id}`)
+                      }
+                    ></i>
                   </td>
                   <td>
                     <i
@@ -57,12 +70,6 @@ const Customers: FunctionComponent<CustomersProps> = () => {
                           deleteCustomer(customer.id as string)
                             .then(() => {
                               setCustomersChanged(!customersChanged);
-                              addCustomer({
-                                firstName: "Margol",
-                                lastName: "Bitter",
-                                email: "margol@avi.com",
-                                phone: "0526325693",
-                              });
                             })
                             .catch((err) => console.log(err));
                         }
